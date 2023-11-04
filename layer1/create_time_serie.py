@@ -17,7 +17,6 @@ def repeat_lst_items_randomly(input_list: list, max_number_of_repeatation):
             repeated_list.append(item)
     return repeated_list
 
-
 def create_time_serie(gnodb_postion_lst: list, serie: list, max_number_of_repeatation: int = 100, plotting=False,
                       type_rand=None, ue_dir=[1,1]):
     '''
