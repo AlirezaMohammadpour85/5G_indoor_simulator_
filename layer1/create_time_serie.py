@@ -2,6 +2,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 # following can be removed only to plot are used in pycharm
 import matplotlib as mpl
+import pickle
 
 mpl.use('TkAgg')  # !IMPORTANT
 
@@ -18,7 +19,7 @@ def repeat_lst_items_randomly(input_list: list, max_number_of_repeatation):
     return repeated_list
 
 def create_time_serie(gnodb_postion_lst: list, serie: list, max_number_of_repeatation: int = 100, plotting=False,
-                      type_rand=None, ue_dir=[1,1]):
+                      type_rand=None, ue_dir=[1,1], save_fig=False):
     '''
     param: serie : list of BLER list
     '''
@@ -112,6 +113,11 @@ def create_time_serie(gnodb_postion_lst: list, serie: list, max_number_of_repeat
                     axs[3, j].set_ylim([0, 1])
                     # print(repeated_serie[i])
         plt.savefig(f'blers_time_serie_ue_{ue_dir}')
+        if save_fig:
+            # save whole figure
+            pickle.dump(fig, open(f"blers_time_serie_ue_{ue_dir}.pickle", "wb"))
+            # # load figure from file
+            # fig = pickle.load(open("figure.pickle", "rb"))
         plt.show()
 
     return list(repeated_serie)

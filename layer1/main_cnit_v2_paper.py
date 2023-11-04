@@ -141,7 +141,10 @@ for ue_dir in ue_dir_lst:
                                ]
     all_sq_blers_guass_rep = create_time_serie(gnodb_postion_lst=gnodb_postion_lst_paper,
                                                serie=selected_square_blers_values.values(),
-                                               type_rand='Guassian', plotting=True, ue_dir=f"{ue_coor + [0]}")
+                                               type_rand='Guassian',
+                                               plotting=True,
+                                               ue_dir=f"{ue_coor + [0]}",
+                                               save_fig=True)
 
     histo_blers_per_gnodb(gnodbs_list=selected_gnodeb_to_show, bler_values=all_bler_dict,  ue_dir=f"{ue_coor + [0]}")
 
