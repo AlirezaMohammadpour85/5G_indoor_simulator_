@@ -93,7 +93,7 @@ for ue_dir in ue_dir_lst:
 
     # paper one tile
     # sq_tiles_lst = [611, 612, 613, 614, 615, 616, 617, 618, 619, 620]
-    sq_tiles_lst = [610]
+    sq_tiles_lst = [11]
 
     # plot
     sig_plot(tile_postion_list=tile_postion_list, threed=None, path_plot=True, sq_tiles_lst=sq_tiles_lst)

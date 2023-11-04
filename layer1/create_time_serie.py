@@ -115,7 +115,7 @@ def create_time_serie(gnodb_postion_lst: list, serie: list, max_number_of_repeat
         plt.savefig(f'blers_time_serie_ue_{ue_dir}')
         if save_fig:
             # save whole figure
-            pickle.dump(fig, open(f"blers_time_serie_ue_{ue_dir}.pickle", "wb"))
+            pickle.dump((fig,axs), open(f"blers_time_serie_ue_{ue_dir}.pickle", "wb"))
             # # load figure from file
             # fig = pickle.load(open("figure.pickle", "rb"))
         plt.show()
