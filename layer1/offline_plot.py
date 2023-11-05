@@ -28,27 +28,33 @@ fig, ax = plt.subplots(2,3)
 fig.suptitle(f"BLER time series for UE [25, 1, 0]")
 
 ax[0,0].plot(data["data1"][0],data["data1"][1], label="Machine at tile 610")
-ax[0,0].plot(data["dataf1"][0],data["dataf1"][1], label = "Avg. LOS BLER")
+# ax[0,0].plot(data["dataf1"][0],data["dataf1"][1], label = "Avg. LOS BLER")
+ax[0,0].plot(data["dataf1"][0],[0.0018]*100, label = "Avg. LOS BLER")
 ax[0,0].legend(loc='upper right', fontsize=6)
 
 ax[0,1].plot(data["data2"][0],data["data2"][1], label="Machine at tile 610")
-ax[0,1].plot(data["dataf2"][0],data["dataf2"][1], label = "Avg. LOS BLER")
+# ax[0,1].plot(data["dataf2"][0],data["dataf2"][1], label = "Avg. LOS BLER")
+ax[0,1].plot(data["dataf2"][0],[0.056]*100, label = "Avg. LOS BLER")
 ax[0,1].legend(loc='upper right', fontsize=6)
 
 ax[0,2].plot(data["data3"][0],data["data3"][1], label="Machine at tile 610")
-ax[0,2].plot(data["dataf3"][0],data["dataf3"][1], label = "Avg. LOS BLER")
+# ax[0,2].plot(data["dataf3"][0],data["dataf3"][1], label = "Avg. LOS BLER")
+ax[0,2].plot(data["dataf3"][0],[0.184]*100, label = "Avg. LOS BLER")
 ax[0,2].legend(loc='upper right', fontsize=6)
 
 ax[1,0].plot(data["data4"][0],data["data4"][1], label="Machine at tile 610")
-ax[1,0].plot(data["dataf4"][0],data["dataf4"][1], label = "Avg. LOS BLER")
+# ax[1,0].plot(data["dataf4"][0],data["dataf4"][1], label = "Avg. LOS BLER")
+ax[1,0].plot(data["dataf4"][0],[0.088]*100, label = "Avg. LOS BLER")
 ax[1,0].legend(loc='upper right', fontsize=6)
 
 ax[1,1].plot(data["data5"][0],data["data5"][1], label="Machine at tile 610")
-ax[1,1].plot(data["dataf5"][0],data["dataf5"][1], label = "Avg. LOS BLER")
+# ax[1,1].plot(data["dataf5"][0],data["dataf5"][1], label = "Avg. LOS BLER")
+ax[1,1].plot(data["dataf5"][0],[0.159]*100, label = "Avg. LOS BLER")
 ax[1,1].legend(loc='upper right', fontsize=6)
 
 ax[1,2].plot(data["data6"][0],data["data6"][1], label="Machine at tile 610")
-ax[1,2].plot(data["dataf6"][0],data["dataf6"][1], label = "Avg. LOS BLER")
+# ax[1,2].plot(data["dataf6"][0],data["dataf6"][1], label = "Avg. LOS BLER")
+ax[1,2].plot(data["dataf6"][0],[0.264]*100, label = "Avg. LOS BLER")
 ax[1,2].legend(loc='upper right', fontsize=6)
 
 gnb_ls = {
